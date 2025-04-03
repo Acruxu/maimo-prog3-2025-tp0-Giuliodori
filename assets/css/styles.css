@@ -1,0 +1,278 @@
+*{
+box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #242323;
+}
+
+.kanit-light {
+    font-family: "Kanit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .kanit-regular {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .kanit-bold {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+p{
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} 
+
+h1,h2,h3 {
+    font-family: "Kanit", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h1{
+    font-size: 40px;
+    line-height: 45px;
+}
+
+h2{
+    font-size: 40px;
+    line-height: 45px;
+}
+  
+
+/*[] {} ``*/
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: #2D2D2D;
+}
+
+header nav ul li a{
+text-decoration: none;
+color: #C9A66B;
+font-family: "Kanit", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+header nav ul li a:hover{
+color:#82673b;
+}
+
+
+li{ 
+    list-style: none;
+    padding: 5px;
+}
+
+header nav ul li:hover{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 6px;
+    border-color: #F7F1E3;
+    transition: 0.5s ease;
+}
+
+header ul{
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+header .logo_conteiner img{
+    width: 80px;
+}
+
+main {
+    position: relative; 
+    z-index: 1;
+    overflow: hidden; 
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../imagenes/fondo.png);
+    background-size: auto;
+    background-repeat: repeat;
+    opacity: 0.1; 
+    z-index: -1;
+    pointer-events: none; 
+}
+
+
+.hero {
+    position: relative; 
+    height: 400px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c9a66b;
+    margin: 50px auto 0;
+    background-size: cover;
+    color: #800020;
+    box-shadow: 1px 3px 8px #F8E6C2;
+    overflow: hidden; 
+}
+
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../imagenes/comidaFondos.png'); 
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7; 
+    z-index: -1;
+}
+
+.hero h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px 30px;
+    border-radius: 10px;
+   
+}
+
+.hero h1 .arriba {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.hero h1 .abajo {
+    font-size: 30px;
+    font-weight: lighter;
+    margin-top: 5px; 
+}
+
+.recetas{
+  background-color:#c9a66b;
+}
+
+.recetas_grid{
+    display: grid;
+    grid-template-columns: repeat(16,1fr);
+    gap:15px;
+    padding-left: 15px;
+    padding-bottom: 30px;
+}
+
+.recetas h2 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.receta{
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background: #1c1c1c; 
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
+    width: 270px;
+    overflow: hidden;
+    color:#fff ;
+}
+
+.receta img{
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.receta a {
+    display: inline-block;
+    background: #f8d568; 
+    color: #1c1c1c; 
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.receta a:hover {
+    background: #c9a66b;
+}
+
+.boxed {
+    max-width: 1200px;
+    margin: 15px auto;
+    border-radius: 20px;
+}
+
+footer {
+    background-color: #171717;
+    color: #C9A66B; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 40px;
+    text-align: center;
+    border-top: 2px solid #C9A66B; 
+}
+
+.footer_logo img {
+    width: 80px;
+}
+
+.footer_social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer_social a img {
+    width: 24px;
+    transition: transform 0.3s ease;
+}
+
+.footer_social a:hover img {
+    transform: scale(1.2); 
+}
+
+.footer_texto {
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.single_content h1{
+    font-size: 40px;
+    color: white;
+}
