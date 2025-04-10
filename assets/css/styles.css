@@ -120,7 +120,6 @@ main::before {
 .hero {
     position: relative; 
     height: 400px;
-    width: 75%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -174,9 +173,7 @@ main::before {
     margin-top: 5px; 
 }
 
-.recetas{
-  background-color:#c9a66b;
-}
+
 
 .recetas_grid{
     display: grid;
@@ -187,32 +184,12 @@ main::before {
 }
 
 .recetas h2 {
-    text-align: center;
+    padding-left: 15px;
+    text-align: left;
     padding-top: 20px;
+    color: #f8d568;
 }
 
-.receta{
-    grid-column: span 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    background: #1c1c1c; 
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
-    width: 270px;
-    overflow: hidden;
-    color:#fff ;
-}
-
-.receta img{
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
-}
 
 .receta a {
     display: inline-block;
@@ -227,6 +204,44 @@ main::before {
 .receta a:hover {
     background: #c9a66b;
 }
+
+.receta{
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background: #2D2D2D; 
+    border-radius: 10px;
+    border: 0.3px #C9A66B solid;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); 
+    width: 270px;
+    overflow: hidden;
+    color:#fff ;
+}
+
+.receta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+
+.receta img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.receta h3 {
+    font-size: 18px;
+    margin: 13px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
 
 .boxed {
     max-width: 1200px;
@@ -272,7 +287,172 @@ footer {
     opacity: 0.7;
 }
 
+.btn_volver {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #f8d568;
+    color: #1c1c1c;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    transition: background-color 0.3s ease;
+    z-index: 10;
+}
+
+.btn_volver:hover {
+    background-color: #c9a66b;
+}
+
 .single_content h1{
     font-size: 40px;
     color: white;
 }
+
+.single_content {
+    background-color: rgba(28, 28, 28, 0.95);
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow:1px 1px 4px #F8E6C2;
+    color: #fff;
+}
+
+.single_content img {
+    display: block;
+    width: 50%;
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+.ingredients{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content:flex-start;
+    margin-bottom: 20px;
+    border: 2px solid #c9a66b;
+    border-radius: 12px;
+    padding: 15px 30px;
+    
+}
+
+.ingredients li{
+    list-style:circle;
+}
+
+.instrucciones {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content:flex-start;
+    margin-bottom: 20px;
+    border: 2px solid #c9a66b;
+    border-radius: 12px;
+    padding: 15px 30px;
+}
+
+.instrucciones li{
+    list-style: decimal;
+}
+
+.single_content li {
+    margin-bottom: 5px;
+}
+
+.single_content p {
+    line-height: 1.6;
+}
+
+.single_content h2{
+    font-size: 25px;
+    color: #f8d568;
+    margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+    h1 {
+      font-size: 28px;
+      line-height: 34px;
+    }
+  
+    h2 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  
+    .hero {
+      height: 250px;
+      margin: 30px auto 0;
+    }
+  
+    .hero h1 .arriba {
+      font-size: 32px;
+    }
+  
+    .hero h1 .abajo {
+      font-size: 20px;
+    }
+  
+    .recetas_grid {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+  
+    .receta {
+      width: 90%;
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      justify-content: center;
+      gap: 10px;
+    }
+  
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .single_content {
+      padding: 20px;
+      margin: 30px auto;
+    }
+  
+    .single_content img {
+      width: 90%;
+    }
+  
+    footer {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    .recetas_grid {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+  
+    .receta {
+      width: 90%;
+    }
+  
+    header nav ul {
+      gap: 20px;
+    }
+  
+    .single_content {
+      padding: 25px;
+    }
+  
+    .single_content img {
+      width: 70%;
+    }
+  }
